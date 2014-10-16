@@ -1,15 +1,29 @@
 <header>
+  <link rel='stylesheet' href='css\bootstrap.css' />
+  <link rel='stylesheet' href='css\main.css' />
   <script type='text/javascript' src='main.js'></script>
-  <script type='text/javascript' src='js/jquery.js'></script>
-  <link rel='stylesheet' src='css/bootstrap.css' />
-  <script type='text/javascript' src='js/bootstrap.js'></script>
+  <script type='text/javascript' src='js\jquery.js'></script>
+  <script type='text/javascript' src='js\bootstrap.js'></script>
 </header>
 
 <body>
-  <div class='block'>
-    <div class='btn-group'>
-      <button class='btn'>Home</button>
-    </div>
-    
+  <!-- Split button -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  </div>
+
+  <div class='container4'>
+    <p>Test</p>
   </div>
 </body>
