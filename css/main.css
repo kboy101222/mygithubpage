@@ -1,0 +1,16 @@
+.game-title {
+	font-size: 50px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.game-info {
+	font-size: 35px;
+	margin-left: 10px;
+}
+
+.main-title {
+	background-color: #5E5EBF;
+	padding-right: 35px;
+	padding-bottom: 10px;
+}
