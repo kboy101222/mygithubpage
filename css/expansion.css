@@ -1,0 +1,13 @@
+.main-game {
+  border-width: 5px;
+  border-style: solid;
+}
+
+.game-title {
+  font-weight: bold;
+  font-size: 45px;
+  border-style: dashed;
+  border-width: 2px;
+  margin-left: 500px;
+  margin-right: 500px;
+}

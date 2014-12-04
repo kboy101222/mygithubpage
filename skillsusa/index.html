@@ -1,0 +1,81 @@
+<html>
+
+	<header>
+		<script src='jquery.js'></script>
+		<link rel='stylesheet' href='main.css' />
+		<link rel="stylesheet" type="text/css" href="bootstrap\css\bootstrap.css">
+		<script type="text/javascript" src='bootstrap\js\bootstrap.js'></script>
+		<script type="text/javascript" src='js\responsive-calendar.js'></script>
+		<script type="text/javascript" src='css\responsive-calendar.css' media='screen'></script>
+		<script type="text/javascript" src='calendar.js'></script>
+		<link rel='stylesheet' href='slider.css' />
+	</header>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<img src="skills-logo.png" class="navbar-brand" />
+			 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+       			<li class="active"><a href="#">Home</a></li>
+       			<li><a href="#">Meetings</a></li>
+        		<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span>
+          			<ul class="dropdown-menu" role="menu">
+            			<li><a href="#">About Us</a></li>
+            			<li><a href="#">Contact Us</a></li>
+            			<li><a href="#">Photos</a></li>
+            			<li class="divider"></li>
+            			<li><a href="#">Member Profiles</a></li>
+          			</ul>
+        		</li>
+          	</div>
+		</nav>
+		<!-- <span><img src="main-logo.jpg" class='logo-main'/></span> -->
+		<center>
+			<div id="wrapper">
+
+					<!-- The slider wrapper div  -->
+					<div class="slider-wrapper theme-default">
+							<div id="slider" class="nivoSlider">
+
+									<!--  Images to slide through.  -->
+									<img src="skills-logo.png" data-thumb="skills-logo.jpg" alt="" title='Skills USA' />
+									<a href="#"><img src="main-logo.jpg" data-thumb="main-logo.jpg" alt="" title="Champions at Work" /></a>
+									<!-- <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+									<img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" /> -->
+							</div>
+
+							<!--  Captions to show for images  -->
+							<div id="htmlcaption" class="nivo-html-caption">
+									<strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+							</div>
+					</div>
+
+			</div>
+		</center>
+		<br /><br />
+		<div class='col-md-4'>
+			<p class='arti-title'>Lorem Ipsum</p>
+			<!-- <img src='http://placehold.it/100x100&text=placeholder'></img> -->
+		</div>
+		<div class='col-md-4'>
+			<p class='arti-title'>Urgo Unum</p>
+		</div>
+		<div class='col-md-4'>
+			<p class='arti-title'>Cogito Ergo Sum</p>
+		</div>
+
+
+
+    <!--  Load the javascript files  -->
+    <script type="text/javascript" src="slider.js"></script>
+    <script type="text/javascript">
+
+    //<!--  Load the slider  -->
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+
+    </script>
+	</body>
+</html>
