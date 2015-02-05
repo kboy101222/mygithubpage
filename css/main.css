@@ -14,3 +14,8 @@
 	padding-right: 35px;
 	padding-bottom: 10px;
 }
+.blogPost {
+    font: 25px;
+    font-weight: bold;
+    color: black;
+}
