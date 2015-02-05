@@ -74,7 +74,7 @@
         console.log(item.data);
         if (item.data.is_self == true){
             $('<a>', {
-               text: '"' + item.data.title + '"',
+               text: 'Blog Post: "' + item.data.title + '"',
                href: item.data.url,
                class: 'blogPost'
             }).appendTo('#blogSpot');
