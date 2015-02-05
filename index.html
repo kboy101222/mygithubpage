@@ -51,9 +51,11 @@
     <p class='game-title'>GeekWorld Games</p>
     <p class='game-info'>Not completely awful games!</p>
   </div>
-  <div class='blogSpot'></div>
-  
-  <script type='text/javascript'>
+  <div id='blogSpot'></div>
+  <!--
+    Fetches blog posts from /r/kboy101222 and puts them on my website
+  -->
+  <script type='text/javascript'> 
     $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
       $.each(data.data.children, function (i, item) {
         console.log(item.data);
