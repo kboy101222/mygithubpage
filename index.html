@@ -51,6 +51,21 @@
     <p class='game-title'>GeekWorld Games</p>
     <p class='game-info'>Not completely awful games!</p>
   </div>
+  <div class='blogSpot'></div>
+  
+  <script type='text/javascript'>
+    $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
+      $.each(data.data.children, function (i, item) {
+        console.log(item.data);
+        $('<a>', {
+           text: 'Post "' + item.data.title + '" has a score of ' + item.data.score,
+            href: item.data.url,
+            class: 'blogPost'
+        }).appendTo('#blogSpot');
+        $('<br />').appendTo('#blogSpot');
+      });
+    });
+  </script>
 
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
