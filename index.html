@@ -56,17 +56,55 @@
     Fetches blog posts from /r/kboy101222 and puts them on my website
   -->
   <script type='text/javascript'> 
+    // Old Code:
+    // $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
+    //   $.each(data.data.children, function (i, item) {
+    //     console.log(item.data);
+    //     $('<a>', {
+    //       text: 'Post "' + item.data.title + '" has a score of ' + item.data.score,
+    //         href: item.data.url,
+    //         class: 'blogPost'
+    //     }).appendTo('#blogSpot');
+    //     $('<br />').appendTo('#blogSpot');
+    //   });
+    // });
+    // New Code:
     $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
-      $.each(data.data.children, function (i, item) {
+    $.each(data.data.children, function (i, item) {
         console.log(item.data);
-        $('<a>', {
-           text: 'Post "' + item.data.title + '" has a score of ' + item.data.score,
-            href: item.data.url,
-            class: 'blogPost'
-        }).appendTo('#blogSpot');
+        if (item.data.is_self == true){
+            $('<a>', {
+               text: '"' + item.data.title + '"',
+               href: item.data.url,
+               class: 'blogPost'
+            }).appendTo('#blogSpot');
+        }
+        else {
+            if (item.data.domain == 'reddit.com'){
+                $('<a>', {
+                   text: 'Saved by me: "' + item.data.title + '"',
+                   href: item.data.url,
+                   class: 'blogPost'
+                }).appendTo('#blogSpot');
+            }
+            else if (item.data.domain == 'youtu.be' || item.data.domain == 'youtube.com'){
+               $('<a>', {
+                   text: 'Video Link: "' + item.data.title + '"',
+                   href: item.data.url,
+                   class: 'blogPost'
+                }).appendTo('#blogSpot');
+            }
+            else {
+                $('<a>', {
+                    text: 'Link: "' + item.data.title + '"',
+                    href: item.data.url,
+                    class: 'blogPost'
+                }).appendTo('#blogSpot');
+            }
+        }
         $('<br />').appendTo('#blogSpot');
-      });
     });
+});
   </script>
 
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
