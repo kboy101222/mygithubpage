@@ -14,8 +14,21 @@
 	padding-right: 35px;
 	padding-bottom: 10px;
 }
+/* Title of the blog post */
 .blogPost {
     font: 25px;
     font-weight: bold;
     color: black;
+    padding-right: 5%;
+    padding-left: 5%;
+    text-align: center;
+}
+/* Content of the Blog Posts */
+.blogCont {
+    font: 10px;
+    /* font-weight: bold; */
+    color: #5A5A5A;
+    margin-right: 5%;
+    margin-left: 5%;
+    /* text-align: center */
 }
