@@ -1,6 +1,8 @@
 <header>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js'></script>
   <script type='text/javascript' src='js/jquery.js'></script>
+  <!-- Retrieves posts from reddit.com/r/kboy101222 and puts them on the website  -->
+  <!-- To fully see how this works, see the readme.md -->
   <script type='text/javascript' src='main.js'></script>
   <link rel='stylesheet' href='css/bootstrap.css' />
   <script type='text/javascript' src='js/bootstrap.js'></script>
@@ -53,60 +55,6 @@
     <p class='game-info'>Not completely awful games!</p>
   </div>
   <div id='blogSpot'></div>
-  <!--
-    Fetches blog posts from /r/kboy101222 and puts them on my website
-  -->
-  <!--<script type='text/javascript'> 
-    // Old Code:
-    // $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
-    //   $.each(data.data.children, function (i, item) {
-    //     console.log(item.data);
-    //     $('<a>', {
-    //       text: 'Post "' + item.data.title + '" has a score of ' + item.data.score,
-    //         href: item.data.url,
-    //         class: 'blogPost'
-    //     }).appendTo('#blogSpot');
-    //     $('<br />').appendTo('#blogSpot');
-    //   });
-    // });
-    // New Code:
-    $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
-    $.each(data.data.children, function (i, item) {
-        console.log(item.data);
-        if (item.data.is_self == true){
-            $('<a>', {
-               text: 'Blog Post: "' + item.data.title + '"',
-               href: item.data.url,
-               class: 'blogPost'
-            }).appendTo('#blogSpot');
-        }
-        else {
-            if (item.data.domain == 'reddit.com'){
-                $('<a>', {
-                   text: 'Saved by me: "' + item.data.title + '"',
-                   href: item.data.url,
-                   class: 'blogPost'
-                }).appendTo('#blogSpot');
-            }
-            else if (item.data.domain == 'youtu.be' || item.data.domain == 'youtube.com'){
-               $('<a>', {
-                   text: 'Video Link: "' + item.data.title + '"',
-                   href: item.data.url,
-                   class: 'blogPost'
-                }).appendTo('#blogSpot');
-            }
-            else {
-                $('<a>', {
-                    text: 'Link: "' + item.data.title + '"',
-                    href: item.data.url,
-                    class: 'blogPost'
-                }).appendTo('#blogSpot');
-            }
-        }
-        $('<br />').appendTo('#blogSpot');
-    });
-});
-  </script>-->
 
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
