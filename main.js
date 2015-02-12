@@ -1,5 +1,11 @@
 var converter = new Showdown.converter();
 
+// How this works:
+    // 1) Retrieve posts from /r/kboy101222 in JSON format
+    // 2) See what kind of post it is (Selfpost, YouTube, etc.)
+    // 3) Run Selfposts through showdown (Markdown.ls for JS)
+    // 4) Format the rest as needed
+
 $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
     $.each(data.data.children, function (i, item) {
         //console.log(item.data);
@@ -20,6 +26,7 @@ $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
         }
         else {
             switch(item.data.domain){
+                    
                 // Saved Posts on Reddit
                 case 'reddit.com':
                     $('<a>', {
@@ -29,6 +36,7 @@ $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
                     }).appendTo('#blogSpot');
                     $('<br />').appendTo('#blogSpot');
                 break;
+                    
                 // YouTube Video Links
                 case 'youtu.be' || 'youtube.com' :
                    $('<a>', {
@@ -38,10 +46,11 @@ $.getJSON("http://www.reddit.com/r/kboy101222/.json?jsonp=?", function (data) {
                     }).appendTo('#blogSpot');
                     $('<br />').appendTo('#blogSpot');
                     $('<p>', {
-                        text: item.data.secure_media.oembed.description,
+                        html: converter.makeHtml(item.data.secure_media.oembed.description),
                         class: 'blogCont'
                     }).appendTo('#blogSpot');
                 break;
+                    
                 // Everything Else
                 default :
                     $('<a>', {
