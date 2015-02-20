@@ -1,109 +1,111 @@
-<header>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js'></script>
-  <script type='text/javascript' src='js/jquery.js'></script>
-  <!-- Retrieves posts from reddit.com/r/kboy101222 and puts them on the website  -->
-  <!-- To fully see how this works, see the readme.md -->
-  <script type='text/javascript' src='main.js'></script>
-  <link rel='stylesheet' href='css/bootstrap.css' />
-  <script type='text/javascript' src='js/bootstrap.js'></script>
-  <link rel='stylesheet' href='css/main.css' />
-  <script type="text/javascript" src='scrollto\jquery.scrollTo.js'></script>
-</header>
-
-<body>
-  <nav class="navbar navbar-inverse" role="navigation" id='top'>
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">kboy101222.me</a>
-      </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class='active'><a href="#">Home</a></li>
-          <li><a href='#'>Portfolio</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Projects <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <!--<li><a href="#expansion">Expansion</a></li>-->
-              <!--<li><a href='#adven'>Adventurifica</a></li>-->
-              <!--<li class="divider"></li>-->
-              <!--<li class='disabled'><a href="#">More Coming Soon!</a></li>-->
-            </ul>
-          </li>
-          
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-         <div class="form-group">
-            <input type="text" class="form-control" id='search-bar' placeholder="Search My Site"></input>
-         </div>
-         <button type="submit" class="btn btn-default" id='search-btn'>Submit</button>
-       </form>
-
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div class='main-title'>
-    <p class='game-title'>Kboy101222.me</p>
-    <p class='game-info'>A Not So Terrible Website!</p>
-  </div>
-  <div id='blogSpot'></div>
-
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-  <!--  <center>-->
-  <!--  <p name='anchor' class='game-title' id='expansion'><u>EXPANSION</u></p>-->
-  <!--  <center><a href='#top'>Back to the top</a></center><br />-->
-  <!--  <div class='col-md-6'>-->
-  <!--    <div class='thumbnail'>-->
-  <!--      <img src='' alt='place-holder picture'>-->
-  <!--      <div class='caption'>-->
-  <!--        <p>Expansion is an ASCII based civilization manager game.</p>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--  <div class='col-md-6'>-->
-  <!--    <div class='thumbnail'>-->
-  <!--      <img src='' alt='place-holder picture'>-->
-  <!--      <div class='caption'>-->
-  <!--        <p>Expansion is coming SOON!</p>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--  </center>-->
+<html>
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js'></script>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <!-- Retrieves posts from reddit.com/r/kboy101222 and puts them on the website  -->
+    <!-- To fully see how this works, see the readme.md -->
+    <script type='text/javascript' src='main.js'></script>
+    <link rel='stylesheet' href='css/bootstrap.css' />
+    <script type='text/javascript' src='js/bootstrap.js'></script>
+    <link rel='stylesheet' href='css/main.css' />
+    <script type="text/javascript" src='scrollto\jquery.scrollTo.js'></script>
+  </header>
   
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-
-  <!--<center>-->
-  <!--  <p class='game-title' id='adven'><u>Adventurifica!</u></p>-->
-  <!--  <center><a href='#top'>Back to the top</a></center><br />-->
-  <!--  <div class='col-md-6'>-->
-  <!--    <div class='thumbnail'>-->
-  <!--      <img src='' alt='place-holder picture'>-->
-  <!--      <div class='caption'>-->
-  <!--        <p>Adventurifica isn't a game as much as it is me messing around in the unreal engine. There isn't anything <i>special</i> about it other than the title. However, it's 100% free to play around with!</p>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--  <div class='col-md-6'>-->
-  <!--    <div class='thumbnail'>-->
-  <!--      <img src='' alt='place-holder picture'>-->
-  <!--      <div class='caption'>-->
-  <!--        <p>Adventurifica! is coming SOON!</p>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--</center>-->
-  <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-</body>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation" id='top'>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">kboy101222.me</a>
+        </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class='active'><a href="#">Home</a></li>
+            <li><a href='#'>Portfolio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <!--<li><a href="#expansion">Expansion</a></li>-->
+                <!--<li><a href='#adven'>Adventurifica</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li class='disabled'><a href="#">More Coming Soon!</a></li>-->
+              </ul>
+            </li>
+            
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+           <div class="form-group">
+              <input type="text" class="form-control" id='search-bar' placeholder="Search My Site"></input>
+           </div>
+           <button type="submit" class="btn btn-default" id='search-btn'>Submit</button>
+         </form>
+  
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class='main-title'>
+      <p class='game-title'>Kboy101222.me</p>
+      <p class='game-info'>A Not So Terrible Website!</p>
+    </div>
+    <div id='blogSpot'></div>
+  
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+    <!--  <center>-->
+    <!--  <p name='anchor' class='game-title' id='expansion'><u>EXPANSION</u></p>-->
+    <!--  <center><a href='#top'>Back to the top</a></center><br />-->
+    <!--  <div class='col-md-6'>-->
+    <!--    <div class='thumbnail'>-->
+    <!--      <img src='' alt='place-holder picture'>-->
+    <!--      <div class='caption'>-->
+    <!--        <p>Expansion is an ASCII based civilization manager game.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--  <div class='col-md-6'>-->
+    <!--    <div class='thumbnail'>-->
+    <!--      <img src='' alt='place-holder picture'>-->
+    <!--      <div class='caption'>-->
+    <!--        <p>Expansion is coming SOON!</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--  </center>-->
+    
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+  
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+  
+    <!--<center>-->
+    <!--  <p class='game-title' id='adven'><u>Adventurifica!</u></p>-->
+    <!--  <center><a href='#top'>Back to the top</a></center><br />-->
+    <!--  <div class='col-md-6'>-->
+    <!--    <div class='thumbnail'>-->
+    <!--      <img src='' alt='place-holder picture'>-->
+    <!--      <div class='caption'>-->
+    <!--        <p>Adventurifica isn't a game as much as it is me messing around in the unreal engine. There isn't anything <i>special</i> about it other than the title. However, it's 100% free to play around with!</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--  <div class='col-md-6'>-->
+    <!--    <div class='thumbnail'>-->
+    <!--      <img src='' alt='place-holder picture'>-->
+    <!--      <div class='caption'>-->
+    <!--        <p>Adventurifica! is coming SOON!</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</center>-->
+    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+  </body>
+</html>
