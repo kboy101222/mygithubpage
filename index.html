@@ -1,20 +1,23 @@
-<html>
-  <header>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js'></script>
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <!-- Retrieves posts from reddit.com/r/kboy101222 and puts them on the website  -->
-    <!-- To fully see how this works, see the readme.md -->
-    <script type='text/javascript' src='main.js'></script>
-    <link rel='stylesheet' href='css/bootstrap.css' />
-    <script type='text/javascript' src='js/bootstrap.js'></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href='css/main.css' />
-    <script type="text/javascript" src='scrollto\jquery.scrollTo.js'></script>
-  </header>
-  
-  <body>
-    <nav class="navbar navbar-inverse" role="navigation" id='top'>
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AngularJS Plunker</title>
+    <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link data-require="font-awesome@4.3.0" data-semver="4.3.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <script data-require="bootstrap@*" data-semver="3.3.2" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.0-rc.0/angular.js" data-semver="1.4.0-rc.0"></script>
+    <script data-require="jquery@*" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <nav class="navbar navbar-inverse" role="navigation" id="top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -26,14 +29,18 @@
           </button>
           <a class="navbar-brand" href="#">kboy101222.me</a>
         </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class='active'><a href="#">Home</a></li>
-            <li><a href='#'>Portfolio</a></li>
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Projects <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Projects                 <span class="caret"></span>
+              </a>
               <ul class="dropdown-menu" role="menu">
                 <!--<li><a href="#expansion">Expansion</a></li>-->
                 <!--<li><a href='#adven'>Adventurifica</a></li>-->
@@ -41,72 +48,49 @@
                 <!--<li class='disabled'><a href="#">More Coming Soon!</a></li>-->
               </ul>
             </li>
-            
           </ul>
           <form class="navbar-form navbar-left" role="search">
-           <div class="form-group">
-              <input type="text" class="form-control" id='search-bar' placeholder="Search My Site"></input>
-           </div>
-           <button type="submit" class="btn btn-default" id='search-btn'>Submit</button>
-         </form>
-  
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+            <div class="form-group">
+              <input type="text" class="form-control" id="search-bar" placeholder="Search My Site" />
+            </div>
+            <button type="submit" class="btn btn-default" id="search-btn">Submit</button>
+          </form>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
-    <div class='main-title'>
-      <p class='game-title'>Kboy101222.me</p>
-      <p class='game-info'>A Not So Terrible Website!</p>
+    <div class="main-title">
+      <p class="game-title">Kboy101222.me</p>
+      <p class="game-info">A Not So Terrible Website!</p>
     </div>
-    <div id='blogSpot'></div>
-  
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-    <!--  <center>-->
-    <!--  <p name='anchor' class='game-title' id='expansion'><u>EXPANSION</u></p>-->
-    <!--  <center><a href='#top'>Back to the top</a></center><br />-->
-    <!--  <div class='col-md-6'>-->
-    <!--    <div class='thumbnail'>-->
-    <!--      <img src='' alt='place-holder picture'>-->
-    <!--      <div class='caption'>-->
-    <!--        <p>Expansion is an ASCII based civilization manager game.</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--  <div class='col-md-6'>-->
-    <!--    <div class='thumbnail'>-->
-    <!--      <img src='' alt='place-holder picture'>-->
-    <!--      <div class='caption'>-->
-    <!--        <p>Expansion is coming SOON!</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--  </center>-->
-    
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-  
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
-  
-    <!--<center>-->
-    <!--  <p class='game-title' id='adven'><u>Adventurifica!</u></p>-->
-    <!--  <center><a href='#top'>Back to the top</a></center><br />-->
-    <!--  <div class='col-md-6'>-->
-    <!--    <div class='thumbnail'>-->
-    <!--      <img src='' alt='place-holder picture'>-->
-    <!--      <div class='caption'>-->
-    <!--        <p>Adventurifica isn't a game as much as it is me messing around in the unreal engine. There isn't anything <i>special</i> about it other than the title. However, it's 100% free to play around with!</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--  <div class='col-md-6'>-->
-    <!--    <div class='thumbnail'>-->
-    <!--      <img src='' alt='place-holder picture'>-->
-    <!--      <div class='caption'>-->
-    <!--        <p>Adventurifica! is coming SOON!</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</center>-->
-    <!--<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-->
+    <br />
+    <div ng-repeat="title in title" class="posts">
+      <div class="postTitle">
+        <a ng-bind-html="title" class="posts" ng-href="{{ links[$index] }}">{{ title }}</a>
+      </div>
+      <!--<br />-->
+      <div class="postCont">
+        <span ng-bind-html="content[$index] | markdown"></span>
+      </div>
+      <div class="interactions">
+        <span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                 <a class="fa fa-thumbs-o-up fa-stack-1x fa-inverse upVote" title="Upvote"></a>
+                <!-- fa-thumbs-o-up -->
+            </span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <a class="fa fa-refresh fa-stack-1x fa-inverse refresh" title="Refresh"></a>
+            </span>
+            <span class="comments">
+                Comments: <span class="numComm">0</span>
+            </span>
+        </span>
+    </div>
+      <br />
+    </div>
   </body>
+
 </html>
